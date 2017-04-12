@@ -26,23 +26,37 @@
         android:text="多任务断点续传下载"/>
 
 
+    <Button
+        android:id="@+id/btn_test_0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test-0"
+        android:textAllCaps="false"/>
+
+
+    <Button
+        android:id="@+id/btn_test_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test-1"
+        android:textAllCaps="false"/>
 
 
     <com.daimajia.numberprogressbar.NumberProgressBar
-        android:id="@+id/number_progress_bar"
         xmlns:custom="http://schemas.android.com/apk/res-auto"
-        custom:progress_text_size="20sp"
-        android:layout_marginTop="20dp"
+        android:id="@+id/number_progress_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-    />
+        android:layout_marginTop="20dp"
+        custom:progress_text_size="20sp"
+        />
 
 
     <TextView
         android:id="@+id/tv_msg"
-        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"/>
 
     <ImageView
         android:id="@+id/img"

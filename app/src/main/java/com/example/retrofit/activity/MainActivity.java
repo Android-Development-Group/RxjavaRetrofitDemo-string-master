@@ -49,6 +49,8 @@ public class MainActivity extends RxAppCompatActivity implements View.OnClickLis
         findViewById(R.id.btn_rx).setOnClickListener(this);
         findViewById(R.id.btn_rx_mu_down).setOnClickListener(this);
         findViewById(R.id.btn_rx_uploade).setOnClickListener(this);
+        findViewById(R.id.btn_test_0).setOnClickListener(this);
+        findViewById(R.id.btn_test_0).setOnClickListener(this);
         img = (ImageView) findViewById(R.id.img);
         progressBar = (NumberProgressBar) findViewById(R.id.number_progress_bar);
 
@@ -90,6 +92,12 @@ public class MainActivity extends RxAppCompatActivity implements View.OnClickLis
                 Intent intent = new Intent(this, DownLaodActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.btn_test_0:
+                startActivity(new Intent(this, GankTestActivity.class));
+                break;
+            case R.id.btn_test_1:
+
+                break;
         }
     }
 
@@ -98,15 +106,17 @@ public class MainActivity extends RxAppCompatActivity implements View.OnClickLis
     public void onNext(String resulte, String mothead) {
         /*post返回处理*/
         if (mothead.equals(postEntity.getMethod())) {
-            BaseResultEntity<ArrayList<SubjectResulte>>   subjectResulte = JSONObject.parseObject(resulte, new
-                    TypeReference<BaseResultEntity<ArrayList<SubjectResulte>>>(){});
+            BaseResultEntity<ArrayList<SubjectResulte>> subjectResulte = JSONObject.parseObject(resulte, new
+                    TypeReference<BaseResultEntity<ArrayList<SubjectResulte>>>() {
+                    });
             tvMsg.setText("post返回：\n" + subjectResulte.getData().toString());
         }
 
         /*上传返回处理*/
         if (mothead.equals(uplaodApi.getMethod())) {
             BaseResultEntity<UploadResulte> subjectResulte = JSONObject.parseObject(resulte, new
-                    TypeReference<BaseResultEntity<UploadResulte>>(){});
+                    TypeReference<BaseResultEntity<UploadResulte>>() {
+                    });
             UploadResulte uploadResulte = subjectResulte.getData();
             tvMsg.setText("上传成功返回：\n" + uploadResulte.getHeadImgUrl());
             Glide.with(MainActivity.this).load(uploadResulte.getHeadImgUrl()).skipMemoryCache(true).into(img);
