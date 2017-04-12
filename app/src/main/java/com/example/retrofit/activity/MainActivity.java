@@ -16,6 +16,7 @@ import com.example.retrofit.entity.api.UploadApi;
 import com.example.retrofit.entity.resulte.BaseResultEntity;
 import com.example.retrofit.entity.resulte.SubjectResulte;
 import com.example.retrofit.entity.resulte.UploadResulte;
+import com.example.retrofit.utils.ToastUtils;
 import com.trello.rxlifecycle.components.support.RxAppCompatActivity;
 import com.wzgiceman.rxretrofitlibrary.retrofit_rx.exception.ApiException;
 import com.wzgiceman.rxretrofitlibrary.retrofit_rx.http.HttpManager;
@@ -50,7 +51,7 @@ public class MainActivity extends RxAppCompatActivity implements View.OnClickLis
         findViewById(R.id.btn_rx_mu_down).setOnClickListener(this);
         findViewById(R.id.btn_rx_uploade).setOnClickListener(this);
         findViewById(R.id.btn_test_0).setOnClickListener(this);
-        findViewById(R.id.btn_test_0).setOnClickListener(this);
+        findViewById(R.id.btn_test_1).setOnClickListener(this);
         img = (ImageView) findViewById(R.id.img);
         progressBar = (NumberProgressBar) findViewById(R.id.number_progress_bar);
 
@@ -96,7 +97,7 @@ public class MainActivity extends RxAppCompatActivity implements View.OnClickLis
                 startActivity(new Intent(this, GankTestActivity.class));
                 break;
             case R.id.btn_test_1:
-
+                ToastUtils.showCustomToast(this, "Hello", R.drawable.alert_wrong_img);
                 break;
         }
     }
