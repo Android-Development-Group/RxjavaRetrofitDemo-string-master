@@ -1,6 +1,7 @@
 package com.example.retrofit.utils;
 
 import android.content.Context;
+import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
 import android.view.View;
@@ -57,7 +58,7 @@ public final class ToastUtils {
         mToast.show();
     }
 
-    public static void showCustomToast(Context context, @NonNull String msg, @NonNull int strRes) {
+    public static void showCustomToast(Context context, @NonNull String msg, @DrawableRes int strRes) {
         if (mToast == null) {
             mToast = Toast.makeText(context.getApplicationContext(), msg, Toast.LENGTH_SHORT);
         }
