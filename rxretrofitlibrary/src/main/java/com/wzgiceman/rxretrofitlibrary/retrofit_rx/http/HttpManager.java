@@ -50,6 +50,7 @@ public class HttpManager {
     public void doHttpDeal(final BaseApi basePar) {
         //手动创建一个OkHttpClient并设置超时时间缓存等设置
         OkHttpClient.Builder builder = new OkHttpClient.Builder();
+//        builder.addInterceptor(new CacheInterceptor());
         builder.connectTimeout(basePar.getConnectionTime(), TimeUnit.SECONDS);
 
         /*创建retrofit对象*/
@@ -78,7 +79,7 @@ public class HttpManager {
                 /*回调线程*/
                 .observeOn(AndroidSchedulers.mainThread());
 
-        /*ober回调，链接式返回*/
+        /*obser回调，链接式返回*/
         if (onNextSubListener != null && null != onNextSubListener.get()) {
             onNextSubListener.get().onNext(observable, basePar.getMethod());
         }

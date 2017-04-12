@@ -15,6 +15,9 @@ public class Gank1Api extends BaseApi {
 
     public Gank1Api() {
         setBaseUrl(TotalBaseApi.GANK_IO_1_URL);
+    }
+
+    public void setting() {
         setShowProgress(true);
         setMethod(TotalBaseApi.Url.URL_FULI_10);
         setCache(true);
@@ -22,6 +25,7 @@ public class Gank1Api extends BaseApi {
 
     @Override
     public Observable getObservable(Retrofit retrofit) {
+        setting();
         HttpGankService httpGankService = retrofit.create(HttpGankService.class);
         return httpGankService.getGank_1();
     }
