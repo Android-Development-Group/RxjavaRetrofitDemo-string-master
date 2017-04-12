@@ -82,8 +82,8 @@ public class SubjectPostApi extends BaseApi {
     */
     @Override
     public Observable getObservable(Retrofit retrofit) {
-        HttpPostService httpService = retrofit.create(HttpPostService.class);
-        return httpService.getAllVedioBy(isAll());
+        HttpPostService httpGankService = retrofit.create(HttpPostService.class);
+        return httpGankService.getAllVedioBy(isAll());
     }
   }
 

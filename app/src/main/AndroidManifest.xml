@@ -24,8 +24,11 @@
         </activity>
         <activity android:name=".activity.DownLaodActivity">
         </activity>
-        <activity android:name=".activity.GankTestActivity">
-        </activity>
+
+        <activity
+            android:name=".test.GankTestActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
     </application>
 
 </manifest>

@@ -20,6 +20,7 @@ public class UploadApi extends BaseApi {
     private MultipartBody.Part part;
 
     public UploadApi() {
+        setBaseUrl("https://www.izaodao.com/Api/");
         setShowProgress(true);
         setMethod("AppYuFaKu/uploadHeadImg");
         setCache(false);
@@ -37,9 +38,9 @@ public class UploadApi extends BaseApi {
     @Override
     public Observable getObservable(Retrofit retrofit) {
         HttpUploadService httpService = retrofit.create(HttpUploadService.class);
-        RequestBody uid= RequestBody.create(MediaType.parse("text/plain"), "4811420");
+        RequestBody uid = RequestBody.create(MediaType.parse("text/plain"), "4811420");
         RequestBody key = RequestBody.create(MediaType.parse("text/plain"), "2bd467f727cdf2138c1067127e057950");
-        return httpService.uploadImage(uid,key,getPart());
+        return httpService.uploadImage(uid, key, getPart());
     }
 
 }

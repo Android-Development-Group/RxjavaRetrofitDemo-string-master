@@ -16,6 +16,7 @@ import com.example.retrofit.entity.api.UploadApi;
 import com.example.retrofit.entity.resulte.BaseResultEntity;
 import com.example.retrofit.entity.resulte.SubjectResulte;
 import com.example.retrofit.entity.resulte.UploadResulte;
+import com.example.retrofit.test.GankTestActivity;
 import com.example.retrofit.utils.ToastUtils;
 import com.trello.rxlifecycle.components.support.RxAppCompatActivity;
 import com.wzgiceman.rxretrofitlibrary.retrofit_rx.exception.ApiException;

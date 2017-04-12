@@ -15,9 +15,9 @@ public abstract class BaseApi {
     /*是否需要缓存处理*/
     private boolean cache = false;
     /*基础url*/
-    private String baseUrl = "https://www.izaodao.com/Api/";
+    private String baseUrl = "";
     /*方法-如果需要缓存必须设置这个参数；不需要不用設置*/
-    private String method="";
+    private String method = "";
     /*超时时间-默认6秒*/
     private int connectionTime = 6;
     /*有网情况下的本地缓存时间默认60秒*/
@@ -38,7 +38,6 @@ public abstract class BaseApi {
      * @return
      */
     public abstract Observable getObservable(Retrofit retrofit);
-
 
 
     public int getCookieNoNetWorkTime() {
