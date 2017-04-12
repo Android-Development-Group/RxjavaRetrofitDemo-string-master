@@ -1,7 +1,7 @@
 package com.example.retrofit.entity.api;
 
 
-import com.example.retrofit.HttpPostService;
+import com.example.retrofit.service.HttpPostService;
 import com.wzgiceman.rxretrofitlibrary.retrofit_rx.Api.BaseApi;
 
 import retrofit2.Retrofit;

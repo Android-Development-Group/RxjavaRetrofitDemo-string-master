@@ -1,4 +1,4 @@
-package com.example.retrofit;
+package com.example.retrofit.service;
 
 import retrofit2.http.GET;
 import retrofit2.http.Query;

@@ -1,7 +1,7 @@
 package com.example.retrofit.entity.api;
 
 
-import com.example.retrofit.HttpUploadService;
+import com.example.retrofit.service.HttpUploadService;
 import com.wzgiceman.rxretrofitlibrary.retrofit_rx.Api.BaseApi;
 
 import okhttp3.MediaType;

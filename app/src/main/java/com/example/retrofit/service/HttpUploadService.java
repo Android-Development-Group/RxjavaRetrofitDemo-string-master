@@ -1,4 +1,4 @@
-package com.example.retrofit;
+package com.example.retrofit.service;
 
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
